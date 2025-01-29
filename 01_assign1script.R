@@ -1,6 +1,6 @@
 #load and observe data 
 
-mtcars
+data(mtcars)
 ?mtcars
 
 
@@ -11,7 +11,7 @@ library(ggplot2)
 
 ggplot(data = mtcars, aes(x= hp, y= mpg))+
   theme_linedraw()+
-  geom_point()+
+  geom_point(aes(col=am))+
   labs(title = "Miles per Gallon vs. Horsepower",
        y= "Miles per Gallon (mpg)",
        x= "Horsepower (hp)")+
