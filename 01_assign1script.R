@@ -14,4 +14,5 @@ ggplot(data = mtcars, aes(x= hp, y= mpg))+
   labs(title = "Miles per Gallon vs. Horsepower",
        y= "Miles per Gallon (mpg)",
        x= "Horsepower (hp)")+
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  stat_smooth(method=lm)
